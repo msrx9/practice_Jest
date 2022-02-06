@@ -91,3 +91,14 @@ describe('array and repeatbale objects', () => {
     expect(new Set(shoppingList)).toContain('milk');
   });
 });
+
+describe('exception', () => {
+  function compileAndroidCore() {
+    throw new Error('you are using the wrong JDK');
+  }
+
+  test('compiling android goes as expected', () => {
+    expect(() => compileAndroidCore()).toThrow('you are using the wrong JDK');
+    expect(() => compileAndroidCore()).toThrow(/JDK/);
+  });
+});
