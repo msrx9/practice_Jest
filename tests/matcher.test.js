@@ -35,4 +35,13 @@ describe('bool and like that value', () => {
     // .toBeFalsy() does hit "if" statement is false.
     expect(n).toBeFalsy();
   });
+
+  test('zero', () => {
+    const z = 0;
+    expect(z).not.toBeNull();
+    expect(z).toBeDefined();
+    expect(z).not.toBeUndefined();
+    expect(z).not.toBeTruthy();
+    expect(z).toBeFalsy();
+  });
 });
