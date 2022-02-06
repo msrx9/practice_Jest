@@ -65,3 +65,29 @@ describe("number", () => {
     expect(value).toBeCloseTo(0.3);
   });
 });
+
+describe("strings", () => {
+  test("there is no I in item", () => {
+    expect("team").not.toMatch(/I/);
+  });
+
+  test('but there is a "stop" in Chirstoph', () => {
+    expect("Chirstoph").toMatch(/stop/);
+  });
+});
+
+describe("array and repeatbale objects", () => {
+  const shoppingList = [
+    "diapers",
+    "kleenex",
+    "trash bags",
+    "paper towel",
+    "milk",
+  ];
+
+  test("the shopping list has milk on it", () => {
+    expect(shoppingList).toContain("milk");
+    // new Set() does make unique list.
+    expect(new Set(shoppingList)).toContain("milk");
+  });
+});
