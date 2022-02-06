@@ -10,4 +10,13 @@ describe('General matcher test sample', () => {
     // .toEqual() does recursive check field object or array.
     expect(data).toEqual({one: 1, two: 2});
   });
+
+  test('adding positive numbers is not zero', () => {
+    for (let a = 1; a < 10; a++) {
+      for (let b = 1; b < 10; b++) {
+        // The test have to clear for all a + b execute.
+        expect(a + b).not.toBe(0);
+      }
+    }
+  });
 });
