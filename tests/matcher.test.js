@@ -24,10 +24,15 @@ describe('General matcher test sample', () => {
 describe('bool and like that value', () => {
   test('null', () => {
     const n = null;
+    // .toBeNull() does hit only null.
     expect(n).toBeNull();
+    // .toBeDefined() does hit only undefined. 
     expect(n).toBeDefined();
+    // .toBeUndefined() does opposite of .toBeDefined().
     expect(n).not.toBeUndefined();
+    // .toBeTruthy() does hit "if" statement is true.
     expect(n).not.toBeTruthy();
+    // .toBeFalsy() does hit "if" statement is false.
     expect(n).toBeFalsy();
   });
 });
