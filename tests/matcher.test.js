@@ -68,6 +68,7 @@ describe('number', () => {
 
 describe('strings', () => {
   test('there is no I in item', () => {
+    // The '/' means regular expression begin and end.
     expect('team').not.toMatch(/I/);
   });
 
